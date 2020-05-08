@@ -8,18 +8,12 @@ def merge_sort(list)
   second_half = merge_sort(list[n/2..-1])
 
   until first_half.empty? || second_half.empty?
-    if first_half.first < second_half.first
-      sorted << first_half.first
-      first_half.delete(first_half.first)
-    else
-      sorted << second_half.first
-      second_half.delete(second_half.first)
-    end
+    first_half.first < second_half.first \
+      ? sorted << first_half.shift
+      : sorted << second_half.shift
   end
 
-  first_half.each{ |remaining_item| sorted << remaining_item}
-  second_half.each{ |remaining_item| sorted << remaining_item}
-  sorted
+  sorted + first_half + second_half
 end
 
 p merge_sort([1, 2, 3, 4, 5, 6])
