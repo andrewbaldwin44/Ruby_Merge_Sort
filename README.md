@@ -1,7 +1,7 @@
 # Ruby Merge Sort
 > The Merge sorting algorithm written in Ruby for the Odin Project!
 
-[View Demo]()
+[View Demo](https://repl.it/@andrewbaldwin44/RubyMergeSort)
 
 ## Dependecies
 Ruby 2.6.5 (or higher)
